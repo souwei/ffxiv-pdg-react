@@ -1,11 +1,6 @@
 import React from "react";
 import { PropTypes } from "prop-types";
-import {
-  IonCard,
-  IonCardTitle,
-  IonItem,
-  IonList
-} from "@ionic/react";
+import { IonCard, IonCardTitle, IonItem, IonList } from "@ionic/react";
 import msq from "../assets/msq.png";
 import arr from "../assets/arr.png";
 import hw from "../assets/hw.png";
@@ -67,13 +62,12 @@ export const ListView = ({ ListTitle, ListData }) => {
                   src={msq}
                   alt="msq"
                 />
-                <span class="h2">{dungeon.dungeonName} </span>
+                <span className="h2">{dungeon.dungeonName} </span>
               </IonItem>
             );
           })}
         </IonList>
       </IonCard>
-      ;
     </div>
   );
 };
