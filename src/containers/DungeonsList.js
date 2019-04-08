@@ -8,7 +8,12 @@ import {
   IonTabButton,
   IonIcon,
   IonLabel,
-  IonBadge
+  IonBadge,
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonButton,
+  IonSearchbar
 } from "@ionic/react";
 
 export default class DungeonList extends React.Component {
@@ -44,6 +49,16 @@ export default class DungeonList extends React.Component {
     } else {
       return (
         <div>
+          <IonHeader>
+            <IonToolbar>
+              <IonButtons slot="primary">
+                <IonButton onClick={() => {}}>
+                  <IonIcon slot="icon-only" name="search" />
+                </IonButton>
+              </IonButtons>
+              <IonSearchbar placeholder="Search" />
+            </IonToolbar>
+          </IonHeader>
           {this.state.dungeonsData.map(series => {
             return (
               <ListView

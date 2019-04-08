@@ -9,7 +9,6 @@ class App extends Component {
     return (
       <>
         <BrowserRouter>
-          <Navigation />
           <switch>
             <Route path="/dungeons" component={DungeonsList} />
             <Route path="/dungeon" component={DungeonInfo} />

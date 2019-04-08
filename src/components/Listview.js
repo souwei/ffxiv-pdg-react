@@ -5,6 +5,7 @@ import msq from "../assets/msq.png";
 import arr from "../assets/arr.png";
 import hw from "../assets/hw.png";
 import sb from "../assets/sb.png";
+import { withRouter } from "react-router-dom";
 
 const renderDungeonSeries = seriesName => {
   switch (seriesName) {
@@ -43,7 +44,7 @@ const renderDungeonSeries = seriesName => {
   }
 };
 
-export const ListView = ({ ListTitle, ListData }) => {
+export const ListView = withRouter(({ ListTitle, ListData, history }) => {
   return (
     <div>
       <IonCard>
@@ -51,7 +52,16 @@ export const ListView = ({ ListTitle, ListData }) => {
         <IonList>
           {ListData.map((dungeon, idx) => {
             return (
-              <IonItem>
+              <IonItem
+                onClick={() =>
+                  history.push({
+                    pathname: "/dungeon",
+                    state: {
+                      info: dungeon
+                    }
+                  })
+                }
+              >
                 <img
                   style={{
                     height: "auto",
@@ -70,7 +80,7 @@ export const ListView = ({ ListTitle, ListData }) => {
       </IonCard>
     </div>
   );
-};
+});
 
 ListView.propTypes = {
   ListTitle: PropTypes.string.isRequired,

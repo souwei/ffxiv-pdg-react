@@ -65,3 +65,20 @@ export const Navigation = () => {
     </>
   );
 };
+
+// export const Navigation = () => {
+//   return (
+//     <>
+//       <IonHeader>
+//         <IonToolbar>
+//           <IonButtons slot="primary">
+//             <IonButton onClick={() => {}}>
+//               <IonIcon slot="icon-only" name="search" />
+//             </IonButton>
+//           </IonButtons>
+//           <IonSearchbar placeholder="Search" />
+//         </IonToolbar>
+//       </IonHeader>
+//     </>
+//   );
+// };
